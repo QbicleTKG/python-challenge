@@ -65,6 +65,16 @@ with open(pybank_csv, 'r') as csvfile:
     print(f"Greatest Increase: {month_greatest_increase} (${changes[month_greatest_increase]})")
     print(f"Greatest Decrease: {month_greatest_decrease} (${changes[month_greatest_decrease]})")
 
+# produce text file with output results
+output_path = os.path.join('Analysis', 'pybank(analysis_results).txt')
 
+with open(output_path, 'w') as txtfile:
+    txtfile.write("Financial Analysis\n")
+    txtfile.write("----------------------------\n")
+    txtfile.write(f"Total Months: {totalmonths}\n")
+    txtfile.write(f"Total: ${total_profit_loss}\n")
+    txtfile.write(f"Average Change: ${round(average_change, 2)}\n")
+    txtfile.write(f"Greatest Increase: {month_greatest_increase} (${changes[month_greatest_increase]})\n")
+    txtfile.write(f"Greatest Decrease: {month_greatest_decrease} (${changes[month_greatest_decrease]})\n")
 
 
