@@ -14,11 +14,9 @@ with open(pybank_csv, 'r') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     header = next(csvreader)
 
-    # Read how many rows are in file to get toal number of months
+    # Read how many rows are in file to get total number of months
     totalmonths = len(csvfile.readlines())
-
-    
-    
+       
     # Reset files position back to 0 after reading through once
     csvfile.seek(0)
     next(csvfile)
@@ -40,7 +38,6 @@ with open(pybank_csv, 'r') as csvfile:
     # set variable to hold total profits/losses amount
     total_profit_loss = sum(allprofits)
     
-
     # set dictionary and loop to find change between each line of profits
     # and losses
     changes = {}
@@ -56,7 +53,7 @@ with open(pybank_csv, 'r') as csvfile:
     month_greatest_increase = max(changes, key=changes.get)
     month_greatest_decrease = min(changes, key=changes.get)
 
-    #print results
+    #print finance results to terminal
     print("Financial Analysis")
     print("----------------------------") 
     print("Total Months:", totalmonths)
