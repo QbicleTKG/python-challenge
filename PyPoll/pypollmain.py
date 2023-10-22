@@ -61,6 +61,7 @@ with open(output_path, 'w') as txtfile:
     txtfile.write("Election Result\n")
     txtfile.write("-------------------------\n")
     txtfile.write(f"Total Votes: {totalvotes}\n")
+    txtfile.write("-------------------------\n")
     txtfile.write(f"Charles Casper Stockham: {round(charles_perc,3)}% (85213)\n")
     txtfile.write(f"Diana DeGette: {round(diana_perc,3)}% (272892)\n")
     txtfile.write(f"Raymon Anthony Doane: {round(raymon_perc,3)}% (11606)\n")
