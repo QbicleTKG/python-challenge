@@ -38,8 +38,7 @@ with open(pybank_csv, 'r') as csvfile:
     # set variable to hold total profits/losses amount
     total_profit_loss = sum(allprofits)
     
-    # set dictionary and loop to find change between each line of profits
-    # and losses
+    # set dictionary and loop to find change between each line of profits and losses
     changes = {}
     for i in range(1, len(allprofits)):
         month = months[i]

@@ -3,9 +3,6 @@
 #import modules
 import os
 import csv
-import collections  
-from collections import Counter
-from operator import itemgetter
 
 # Path to collect data from the Resources folder
 pypoll_csv = os.path.join('Resources', 'election_data.csv')
